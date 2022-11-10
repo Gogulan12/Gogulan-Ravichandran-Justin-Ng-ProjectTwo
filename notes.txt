@@ -1,0 +1,36 @@
+// PSEUDO CODE
+
+// Record ids of the 3 selected pokemon for dropdown menu
+// Create our namespace object
+
+// create an event listener on submit to the drop down menu selection
+// store user data
+// take user data and add to api endpoint
+// make fetch call
+// record pokemon name, type and image into variables
+// make a function to display pokemon
+// append HTML elements with user selection data
+
+// Mimimum viable product (MVP)
+
+// Title - Choose your starter pokemon
+// Drop down menu with 3 options to select a pokemon (1 of 3)
+// API to record pokemon name, type and image -  display it on screen
+
+// STRETCH GOALS
+
+// GOAL 1: Create a list pokemon selected to display full team with more pokemon options
+// select 6 from a list of 10 pokemon
+
+// GOAL 2: CREATE A ROCK PAPER SCISSORS GAME USING POKEMON
+//// User can use drop down menu to select pokemon from list (multiple pokemon with 3 different types (water, grass, fire))
+//// Display user selection on to page
+//// API will generate opponent pokemon selection per turn
+//// Have counter up to 6 turns (for a full pokemon team)
+//// Compare pokemon type with user selection to determine winner ( if / if else statements) after 6 attempts
+
+// GOAL 3: ADDITIONAL CHANGES TO GAME
+// Add additional pokemon types
+// Adding full list of winning team
+// Add additional pokemon
+// Have a leader board
