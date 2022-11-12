@@ -2,6 +2,7 @@
 
 .container {
   text-align: center;
+  margin-top: 50px;
 }
 
 .pokemonImage {
@@ -13,9 +14,23 @@
   }
 }
 
+// Pokemon Moves styles
+
+.pokemonMoves {
+  margin-bottom: 50px;
+}
+
 #movesList {
   padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
   li {
     list-style: none;
+    width: 40%;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid black;
   }
 }

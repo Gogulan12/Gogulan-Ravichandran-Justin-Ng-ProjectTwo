@@ -260,14 +260,16 @@ nav ul li a {
 
 footer {
   background-color: lightcoral;
-  position: absolute;
-  bottom: 0;
   text-align: center;
   width: 100%;
+}
+footer p {
+  margin: 0;
 }
 
 .container {
   text-align: center;
+  margin-top: 50px;
 }
 
 .pokemonImage {
@@ -279,9 +281,25 @@ footer {
   width: 100%;
 }
 
+.pokemonMoves {
+  margin-bottom: 50px;
+}
+
 #movesList {
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
 }
 #movesList li {
   list-style: none;
+  width: 40%;
+  padding: 20px;
+  margin: 20px;
+  border: 1px solid black;
 }
