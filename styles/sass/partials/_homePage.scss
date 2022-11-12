@@ -1,1 +1,14 @@
 @use "./variables";
+
+.container {
+  text-align: center;
+}
+
+.pokemonImage {
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    width: 100%;
+  }
+}

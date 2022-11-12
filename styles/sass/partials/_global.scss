@@ -1,45 +1,46 @@
 @use "./variables";
 
+// * {
+//   border: 1px solid pink;
+// }
+
 // Header styles
 
-header{
-    background: green;
-
+header {
+  background: lightblue;
 }
-.headerFlex{
-    display: flex;
-    justify-content: space-between;
+.headerFlex {
+  display: flex;
+  justify-content: space-between;
 }
 
-.wrapper{
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1260px;
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1260px;
 }
 
 // nav styles
 
-nav ul{
-    display: flex;
-    
-    li{
-        padding-right: 70px;
-        list-style: none;
+nav ul {
+  display: flex;
 
-        a{
-            text-decoration: none;
-        }
+  li {
+    padding-right: 70px;
+    list-style: none;
+
+    a {
+      text-decoration: none;
     }
+  }
 }
-
-
 
 // footer styles
 
-footer{
-    background-color: red;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
+footer {
+  background-color: lightcoral;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }

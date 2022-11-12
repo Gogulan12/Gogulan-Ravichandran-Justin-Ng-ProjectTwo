@@ -227,7 +227,7 @@ html {
 }
 
 header {
-  background: green;
+  background: lightblue;
 }
 
 .headerFlex {
@@ -259,9 +259,22 @@ nav ul li a {
 }
 
 footer {
-  background-color: red;
+  background-color: lightcoral;
   position: absolute;
   bottom: 0;
   text-align: center;
+  width: 100%;
+}
+
+.container {
+  text-align: center;
+}
+
+.pokemonImage {
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pokemonImage img {
   width: 100%;
 }

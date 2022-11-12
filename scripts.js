@@ -17,39 +17,34 @@ pokemonApp.getPokemon = (pokemonPick) => {
   fetch(url)
     .then((results) => results.json())
     .then((data) => {
-      // console.log(data);
-      document.querySelector("#chosenPokemon").innerHTML = "";
+      console.log(data);
+      // document.querySelector("#chosenPokemon").innerHTML = "";
+      document.querySelector(".pokemonImage").innerHTML = "";
+      document.querySelector(".pokemonName").innerHTML = "";
+      document.querySelector(".pokemonType").innerHTML = "";
       pokemonApp.chosenPokemon(data);
     });
 };
 
 pokemonApp.chosenPokemon = (nameOfPokemon) => {
-  pokemonName = nameOfPokemon.name;
-  // console.log(pokemonName);
-  //   document.body.innerHTML = `<h1>${pokemonName}</h1>`;
-  pokemonType = nameOfPokemon.types[0].type.name;
-  // console.log(pokemonType);
+  const pokemonName = document.createElement("h2");
+  // pokemonName.classList.add("pokemonName");
+  pokemonName.innerText = nameOfPokemon.name;
+  const pokemonType = document.createElement("p");
+  // pokemonType.classList.add("pokemonType");
+  pokemonType.innerText = nameOfPokemon.types[0].type.name;
+  const pokemonImage = document.createElement("img");
+  // pokemonImage.classList.add("pokemonImage");
+  pokemonImage.src =
+    nameOfPokemon.sprites.other["official-artwork"].front_default;
+  pokemonImage.alt = "pokemon Image";
 
-  pokemonImage = nameOfPokemon.sprites.other["official-artwork"].front_default;
-  // console.log(pokemonImage);
+  // console.log(pokemonName, pokemonType, pokemonImage);
 
-  //https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Using_images
-  // const pImage = document.querySelector(".image img");
-  // pImage.src = pokemonImage;
-  // const pName = document.querySelector(".pokemonName");
-  // pName.innerHTML = pokemonName;
-  // const pType = document.querySelector(".pokemonType");
-  // pType.innerHTML = pokemonType;
-
-  const pName = document.createElement("h1");
-  pName.innerText = pokemonName;
-  const pType = document.createElement("p");
-  pType.innerText = pokemonType;
-  const pImage = document.createElement("img");
-  pImage.src = pokemonImage;
-  pImage.alt = "pokemon Image";
-
-  document.querySelector("#chosenPokemon").append(pImage, pName, pType);
+  // add them to the selected div within main page
+  document.querySelector(".pokemonImage").append(pokemonImage);
+  document.querySelector(".pokemonName").append(pokemonName);
+  document.querySelector(".pokemonType").append(pokemonType);
 };
 
 // Function will get users input
