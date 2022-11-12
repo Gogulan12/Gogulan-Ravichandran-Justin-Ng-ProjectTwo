@@ -5,22 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon</title>
+    <link rel="stylesheet" href="./styles/styles.css">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <h1 id="page-title">Pokemon</h1>
 
-        <form action="">
-          <label for="Pokemon">Choose your starter Pokemon:</label>
-          <select name="Pokemon" id="Pokemon">
-            <option value="1">Bulbasaur</option>
-            <option value="4">Charmander</option>
-            <option value="7">Squirtle</option>
-          </select>
-        </form>
+     <!-- Header section -->
+    <header class= header>
+      <div class="wrapper headerFlex">
+        
+        <h2>Pokemon</h2>
+        
+        <!-- navBar -->
+        <nav>
+          <ul>
+            <li><a href="./index.html">STARTERS</a></li>
+            <li><a href="./battle.html">BATTLE</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
+
+
+    <section>
+      <div class="container">
+          <h1 id="page-title">Choose your starter Pokemon</h1>
+
+          <form action="">
+            <label for="Pokemon">Select Here:</label>
+            <select name="Pokemon" id="Pokemon">
+              <option value="1">Bulbasaur</option>
+              <option value="4">Charmander</option>
+              <option value="7">Squirtle</option>
+            </select>
+          </form>
+      </div>
+    </section>
+     
+    
     <main>
       <div class="container" id="chosenPokemon"></div>
 
@@ -30,6 +51,10 @@
       <h1 class="pokemonName"></h1>
       <p class="pokemonType"></p> -->
     </main>
+
+    <footer>
+      <p>Made by Juno College</p>
+    </footer>
 
     <script src="scripts.js"></script>
   </body>

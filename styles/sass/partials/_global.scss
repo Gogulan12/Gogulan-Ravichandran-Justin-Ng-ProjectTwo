@@ -1,0 +1,29 @@
+@use "./variables";
+
+// Header styles
+
+.headerFlex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1260px;
+}
+
+// nav styles
+
+nav ul{
+    display: flex;
+    
+    li{
+        padding-right: 70px;
+        list-style: none;
+
+        a{
+            text-decoration: none;
+        }
+    }
+}

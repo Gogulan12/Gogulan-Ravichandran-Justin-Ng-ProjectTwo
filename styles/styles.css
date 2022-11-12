@@ -225,3 +225,31 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.headerFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1260px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+nav ul li {
+  padding-right: 70px;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+}
