@@ -2,6 +2,10 @@
 
 // Header styles
 
+header{
+    background: green;
+
+}
 .headerFlex{
     display: flex;
     justify-content: space-between;
@@ -26,4 +30,16 @@ nav ul{
             text-decoration: none;
         }
     }
+}
+
+
+
+// footer styles
+
+footer{
+    background-color: red;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
 }

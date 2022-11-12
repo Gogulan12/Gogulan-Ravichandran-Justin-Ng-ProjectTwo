@@ -226,6 +226,10 @@ html {
   overflow: hidden;
 }
 
+header {
+  background: green;
+}
+
 .headerFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,4 +256,12 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
+}
+
+footer {
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
