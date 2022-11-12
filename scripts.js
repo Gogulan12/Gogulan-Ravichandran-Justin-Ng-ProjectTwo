@@ -22,6 +22,7 @@ pokemonApp.getPokemon = (pokemonPick) => {
       document.querySelector(".pokemonImage").innerHTML = "";
       document.querySelector(".pokemonName").innerHTML = "";
       document.querySelector(".pokemonType").innerHTML = "";
+      document.querySelector("#movesList").innerHTML = "";
       pokemonApp.chosenPokemon(data);
     });
 };
@@ -39,12 +40,36 @@ pokemonApp.chosenPokemon = (nameOfPokemon) => {
     nameOfPokemon.sprites.other["official-artwork"].front_default;
   pokemonImage.alt = "pokemon Image";
 
+  // for (let i= 0; i < 4; i++) {
+  //   const pokemonMoveOne = document.createElement("li");
+  //   pokemonMoveOne.innerText = nameOfPokemon.moves[i].move.name;
+  //   document.querySelector("#movesList").append(pokemonMoveOne);
+  // }
+
+  // const pokemonMoveOne = document.createElement("li");
+
+  // nameOfPokemon.moves[0].move.name;
+  // console.log(pokemonMoveOne);
+  // pokemonMoveOne.innerText = nameOfPokemon.moves[0].move.name;
+
   // console.log(pokemonName, pokemonType, pokemonImage);
 
   // add them to the selected div within main page
   document.querySelector(".pokemonImage").append(pokemonImage);
   document.querySelector(".pokemonName").append(pokemonName);
-  document.querySelector(".pokemonType").append(pokemonType);
+  document
+    .querySelector(".pokemonType")
+    .append(`type: ${pokemonType.innerText}`);
+  // document.querySelector("#movesList").append(pokemonMoveOne);
+
+  // const movesTitle = docment.createElement(`<h3>Moves:</h3>`);
+  // document.querySelector("pokemonMoves").append(movesTitle);
+
+  for (let i = 0; i < 4; i++) {
+    const pokemonMoves = document.createElement("li");
+    pokemonMoves.innerText = nameOfPokemon.moves[i].move.name;
+    document.querySelector("#movesList").append(pokemonMoves);
+  }
 };
 
 // Function will get users input

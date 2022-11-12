@@ -278,3 +278,10 @@ footer {
 .pokemonImage img {
   width: 100%;
 }
+
+#movesList {
+  padding: 0;
+}
+#movesList li {
+  list-style: none;
+}
