@@ -284,6 +284,7 @@ html {
   padding: 50px;
   background-color: #2a75bb;
   color: white;
+  height: 40vh;
 }
 
 .container {
@@ -373,4 +374,5 @@ main {
 .pokemonName,
 .pokemonType {
   color: white;
+  text-transform: capitalize;
 }

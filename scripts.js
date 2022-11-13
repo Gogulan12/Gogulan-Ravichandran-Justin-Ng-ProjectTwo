@@ -1,8 +1,6 @@
 // Create a namespace for our app:
 const pokemonApp = {};
-// console.log(document.querySelector(".pokemonBalls"));
-// const info = document.querySelector(".pokemonImage");
-// console.log(info);
+
 // An initializer function! The first thing that will be called, and it will start all other parts of our app up and running.
 pokemonApp.init = () => {
   // pokemonApp.getPokemon();
@@ -57,10 +55,8 @@ pokemonApp.chosenPokemon = (nameOfPokemon) => {
   document
     .querySelector(".pokemonType")
     .append(`Type: ${pokemonType.innerText}`);
-  // document.querySelector("#movesList").append(pokemonMoveOne);
 
-  // const movesTitle = docment.createElement(`<h3>Moves:</h3>`);
-  // document.querySelector("pokemonMoves").append(movesTitle);
+  // added list of move tyes
   document.querySelector(".pokemonType").append(moveTitle);
   for (let i = 0; i < 4; i++) {
     const pokemonMoves = document.createElement("li");
