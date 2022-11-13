@@ -1,9 +1,12 @@
 // Create a namespace for our app:
 const pokemonApp = {};
-
+// console.log(document.querySelector(".pokemonBalls"));
+// const info = document.querySelector(".pokemonImage");
+// console.log(info);
 // An initializer function! The first thing that will be called, and it will start all other parts of our app up and running.
 pokemonApp.init = () => {
   // pokemonApp.getPokemon();
+
   pokemonApp.getUserInput();
 };
 
@@ -19,6 +22,7 @@ pokemonApp.getPokemon = (pokemonPick) => {
     .then((data) => {
       console.log(data);
       // document.querySelector("#chosenPokemon").innerHTML = "";
+      document.querySelector(".pokemonBalls").innerHTML = "";
       document.querySelector(".pokemonImage").innerHTML = "";
       document.querySelector(".pokemonName").innerHTML = "";
       document.querySelector(".pokemonType").innerHTML = "";
@@ -40,31 +44,24 @@ pokemonApp.chosenPokemon = (nameOfPokemon) => {
     nameOfPokemon.sprites.other["official-artwork"].front_default;
   pokemonImage.alt = "pokemon Image";
 
-  // for (let i= 0; i < 4; i++) {
-  //   const pokemonMoveOne = document.createElement("li");
-  //   pokemonMoveOne.innerText = nameOfPokemon.moves[i].move.name;
-  //   document.querySelector("#movesList").append(pokemonMoveOne);
-  // }
+  const contgratsMessage = document.createElement("h2");
+  contgratsMessage.textContent = "Congratulations!! You Chose:";
 
-  // const pokemonMoveOne = document.createElement("li");
-
-  // nameOfPokemon.moves[0].move.name;
-  // console.log(pokemonMoveOne);
-  // pokemonMoveOne.innerText = nameOfPokemon.moves[0].move.name;
-
-  // console.log(pokemonName, pokemonType, pokemonImage);
+  const moveTitle = document.createElement("h3");
+  moveTitle.textContent = "Moves:";
 
   // add them to the selected div within main page
+  document.querySelector(".pokemonBalls").appendChild(contgratsMessage);
   document.querySelector(".pokemonImage").append(pokemonImage);
   document.querySelector(".pokemonName").append(pokemonName);
   document
     .querySelector(".pokemonType")
-    .append(`type: ${pokemonType.innerText}`);
+    .append(`Type: ${pokemonType.innerText}`);
   // document.querySelector("#movesList").append(pokemonMoveOne);
 
   // const movesTitle = docment.createElement(`<h3>Moves:</h3>`);
   // document.querySelector("pokemonMoves").append(movesTitle);
-
+  document.querySelector(".pokemonType").append(moveTitle);
   for (let i = 0; i < 4; i++) {
     const pokemonMoves = document.createElement("li");
     pokemonMoves.innerText = nameOfPokemon.moves[i].move.name;
