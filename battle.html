@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Battle</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <!-- Header section -->
+    <header>
+      <div class="wrapper headerFlex">
+        <h2>Pokemon</h2>
+
+        <!-- navBar -->
+        <nav>
+          <ul>
+            <li><a href="./index.html">STARTERS</a></li>
+            <li><a href="./battle.html">BATTLE</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- MAIN SECTION WITH TITLE AND SELECTION BUTTION -->
+    <section class="battleSelection">
+      <div class="battleContainer">
+        <h1 id="pageTitle">Pokemon Battle Tornament</h1>
+        <h2>Choose a Pokemon!!</h2>
+        <div class="imagePikachu">
+          <img src="./images/pikachu.png" alt="pikachu" />
+        </div>
+        <div class="buttonSelection">
+          <button>Press Here!</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Display the choice between you and computer -->
+    <section class="youAndComputerChoice">
+      <h2>Selection</h2>
+      <div class="choiceContainer">
+        <div class="yourChoice">
+          <h3>You:</h3>
+          <div class="imageContainerOne">
+            <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+          </div>
+          <div class="pokemonName1">
+            <p>Pokemon Name</p>
+          </div>
+        </div>
+
+        <div class="computerChoice">
+          <h3>Computer:</h3>
+          <div class="imageContainerTwo">
+            <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+          </div>
+          <div class="pokemonName2">
+            <p>Pokemon Name</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DISPLAY TOURNAMENT WITH PLAYER AND POKEMON TYPE -->
+    <section class="battle">
+      <h2>Battle</h2>
+      <div class="wrapper">
+        <div class="characterAndChoiceContainer">
+          <div class="characterAndChoiceOne">
+            <div class="displayCharacter">
+              <img
+                class="playerPic"
+                src="Images/maincharacter.png"
+                alt="pokemon trainer"
+              />
+              <div class="pokeballTeam">
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+              </div>
+            </div>
+
+            <div class="yourChoice">
+              <h3>You:</h3>
+              <div class="imageContainerOne">
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+              </div>
+              <div class="pokemonName1">
+                <p>Pokemon Name</p>
+              </div>
+              <div class="pokemonType1">
+                <p>Pokemon Type</p>
+              </div>
+            </div>
+          </div>
+          <div class="versus">
+            <p>VS</p>
+          </div>
+          <div class="characterAndChoiceTwo">
+            <div class="displayCharacter">
+              <img
+                class="playerPic"
+                src="Images/Computer.png"
+                alt="pokemon trainer"
+              />
+              <div class="pokeballTeam">
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+              </div>
+            </div>
+
+            <div class="computerChoice">
+              <h3>Computer:</h3>
+              <div class="imageContainerTwo">
+                <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+              </div>
+              <div class="pokemonName2">
+                <p>Pokemon Name</p>
+              </div>
+              <div class="pokemonType2">
+                <p>Pokemon Type</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WINNER SECTION -->
+    <section class="winner">
+      <h2>winner</h2>
+      <div class="finalPokemon">
+        <h3 class="winnerName">Winner Name</h3>
+        <div class="imageOfWinner">
+          <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
+        </div>
+        <div class="finalPokemonName">
+          <p>Pokemon Name</p>
+        </div>
+        <div class="typeAdvantage">
+          <p>Type Advantage</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Made at Juno College 2022</p>
+    </footer>
+
+    <script src="battleScripts.js"></script>
+  </body>
+</html>
