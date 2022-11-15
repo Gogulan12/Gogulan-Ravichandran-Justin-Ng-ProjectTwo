@@ -227,6 +227,10 @@ html {
   overflow: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   background: #3c5aa6;
 }
@@ -241,13 +245,17 @@ header {
 }
 
 .headerFlex h2 {
-  color: #ffde00;
+  color: #ffdd00;
 }
 
 .wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: 1260px;
+}
+
+h2 {
+  padding-bottom: 2px;
 }
 
 nav ul {
@@ -262,7 +270,7 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #ffde00;
+  color: #ffdd00;
 }
 
 footer {
@@ -272,7 +280,7 @@ footer {
 }
 footer p {
   margin: 0;
-  color: #ffde00;
+  color: #ffdd00;
   padding: 20px 0;
 }
 
@@ -375,4 +383,41 @@ main {
 .pokemonType {
   color: white;
   text-transform: capitalize;
+}
+
+@media (max-width: 680px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 656px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  nav ul {
+    margin-left: 30px;
+  }
+}
+@media (max-width: 632px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  nav ul {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 608px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    padding-top: 2px;
+  }
+  nav ul {
+    margin-left: 50px;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
 }
