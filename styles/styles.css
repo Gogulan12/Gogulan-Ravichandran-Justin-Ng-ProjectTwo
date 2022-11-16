@@ -423,7 +423,6 @@ button:active {
 }
 
 .youAndComputerChoice h2 {
-  margin: 0px;
   text-align: center;
   padding-bottom: 50px;
   text-transform: uppercase;
@@ -459,9 +458,7 @@ button:active {
 }
 
 .battle h2 {
-  margin: 0px;
   text-align: center;
-  padding-bottom: 50px;
   text-transform: uppercase;
 }
 
@@ -485,7 +482,9 @@ button:active {
 }
 
 .pokemonType1,
-.pokemonType2 {
+.pokemonType2,
+.pokemonLevel1,
+.pokemonLevel2 {
   text-align: center;
 }
 
@@ -499,9 +498,7 @@ button:active {
 }
 
 .winner h2 {
-  margin: 0px;
   text-align: center;
-  padding-bottom: 50px;
   text-transform: uppercase;
 }
 
