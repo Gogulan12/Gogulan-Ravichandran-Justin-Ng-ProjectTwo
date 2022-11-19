@@ -77,3 +77,19 @@ pokemonApp.getUserInput = () => {
 
 // Call the init function to kick our app off! This will always be at the bottom of our file.
 pokemonApp.init();
+
+
+// Hamburger menu on the main page
+
+const hamburger = document.querySelector(".hamburger");
+const navBar = document.querySelector(".navBar")
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navBar.classList.toggle("active");
+})
+
+document.querySelectorAll(".navLink").forEach(n => n.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navBar.classList.remove("active");
+}))

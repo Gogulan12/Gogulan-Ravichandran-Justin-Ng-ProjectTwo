@@ -227,6 +227,10 @@ html {
   overflow: hidden;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   background: #3c5aa6;
 }
@@ -241,7 +245,7 @@ header {
 }
 
 .headerFlex h2 {
-  color: #ffde00;
+  color: #ffdd00;
 }
 
 .wrapper {
@@ -250,19 +254,38 @@ header {
   max-width: 1260px;
 }
 
-nav ul {
+h2 {
+  padding-bottom: 2px;
+}
+
+.navBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 10px;
 }
-nav ul li {
+.navBar li {
   padding-right: 70px;
   list-style: none;
 }
-nav ul li a {
+.navBar li a {
   text-decoration: none;
-  color: #ffde00;
+  color: #ffdd00;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: #ffdd00;
 }
 
 footer {
@@ -272,7 +295,7 @@ footer {
 }
 footer p {
   margin: 0;
-  color: #ffde00;
+  color: #ffdd00;
   padding: 20px 0;
 }
 
@@ -284,7 +307,7 @@ html {
   padding: 50px;
   background-color: #2a75bb;
   color: white;
-  height: 40vh;
+  height: 100%;
 }
 
 .container {
@@ -522,4 +545,99 @@ button:active {
 
 .imageOfWinner img {
   width: 300px;
+@media (max-width: 680px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 656px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  nav ul {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 632px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+  nav ul {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 608px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+    padding-top: 2px;
+  }
+  nav ul {
+    margin-left: 50px;
+  }
+  nav a {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 590px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+  nav a {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 550px) {
+  h2 {
+    font-size: 1.2rem;
+    padding-top: 10px;
+  }
+}
+@media (max-width: 516px) {
+  .navBar {
+    position: absolute;
+    right: -100%;
+    top: 50px;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #3c5aa6;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navBar li {
+    padding: 10px;
+    text-align: right;
+  }
+  .navBar.active {
+    right: 0;
+    padding: 0 15px 0 10px;
+  }
+  .hamburger {
+    display: block;
+    padding-left: 180px;
+    margin-top: 23px;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+}
+@media (max-width: 370px) {
+  .hamburger {
+    padding-left: 10px;
+  }
 }

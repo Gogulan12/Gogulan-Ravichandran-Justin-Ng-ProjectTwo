@@ -4,6 +4,11 @@
 //   border: 1px solid pink;
 // }
 
+body{
+  overflow-x: hidden;
+}
+
+
 // Header styles
 
 header {
@@ -15,7 +20,7 @@ header {
 }
 
 .headerFlex h2 {
-  color: #ffde00;
+  color: variables.$brightYellow;
 }
 
 .wrapper {
@@ -26,7 +31,11 @@ header {
 
 // nav styles
 
-nav ul {
+h2{
+  padding-bottom: 2px;
+}
+
+.navBar {
   display: flex;
   padding-top: 10px;
 
@@ -36,9 +45,26 @@ nav ul {
 
     a {
       text-decoration: none;
-      color: #ffde00;
+      color: variables.$brightYellow;
     }
   }
+}
+
+// Burger menu styles
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: variables.$brightYellow ;
 }
 
 // footer styles
@@ -52,7 +78,7 @@ footer {
 
   p {
     margin: 0;
-    color: #ffde00;
+    color: variables.$brightYellow;
     padding: 20px 0;
   }
 }
