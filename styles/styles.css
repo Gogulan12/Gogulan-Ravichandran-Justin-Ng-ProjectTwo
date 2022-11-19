@@ -545,6 +545,8 @@ button:active {
 
 .imageOfWinner img {
   width: 300px;
+}
+
 @media (max-width: 680px) {
   h1 {
     font-size: 1.9rem;
