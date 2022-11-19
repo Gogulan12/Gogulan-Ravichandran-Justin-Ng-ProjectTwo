@@ -1,3 +1,5 @@
+@use './variables';
+
 
 @media (max-width: 680px) {
     h1{
@@ -68,13 +70,50 @@
 }
 
 @media(max-width: 516px){
-    nav a{
-        display: none;
+    .navBar {
+        position: absolute;
+        right: -100%;
+        top: 50px;
+        gap: 0;
+        flex-direction: column;
+        background: #3c5aa6;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+
+        li{
+            padding: 10px;
+            text-align: right;
+            
+        }
+    }
+
+    .navBar.active{
+        right: 0;
+         padding: 0 15px 0 10px;
+
     }
 
     .hamburger{
         display: block;
         padding-left: 180px;
-        margin-top: -19px;
+        margin-top: 23px;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+@media (max-width:370px) {
+    .hamburger{
+        padding-left: 10px;
     }
 }

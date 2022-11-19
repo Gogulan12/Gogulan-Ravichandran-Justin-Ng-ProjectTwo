@@ -258,17 +258,17 @@ h2 {
   padding-bottom: 2px;
 }
 
-nav ul {
+.navBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding-top: 10px;
 }
-nav ul li {
+.navBar li {
   padding-right: 70px;
   list-style: none;
 }
-nav ul li a {
+.navBar li a {
   text-decoration: none;
   color: #ffdd00;
 }
@@ -281,7 +281,7 @@ nav ul li a {
 .bar {
   display: block;
   width: 25px;
-  height: 4px;
+  height: 3px;
   margin: 5px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -307,7 +307,7 @@ html {
   padding: 50px;
   background-color: #2a75bb;
   color: white;
-  height: 40vh;
+  height: 100%;
 }
 
 .container {
@@ -451,12 +451,48 @@ main {
   }
 }
 @media (max-width: 516px) {
-  nav a {
-    display: none;
+  .navBar {
+    position: absolute;
+    right: -100%;
+    top: 50px;
+    gap: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #3c5aa6;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .navBar li {
+    padding: 10px;
+    text-align: right;
+  }
+  .navBar.active {
+    right: 0;
+    padding: 0 15px 0 10px;
   }
   .hamburger {
     display: block;
     padding-left: 180px;
-    margin-top: -19px;
+    margin-top: 23px;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
+}
+@media (max-width: 370px) {
+  .hamburger {
+    padding-left: 10px;
   }
 }
