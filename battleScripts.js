@@ -1,3 +1,20 @@
+// Hamburger menu on the main page
+
+const hamburger = document.querySelector(".hamburger");
+const navBar = document.querySelector(".navBar");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navBar.classList.toggle("active");
+});
+
+document.querySelectorAll(".navLink").forEach((n) =>
+  n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navBar.classList.remove("active");
+  })
+);
+
 // Create a namespace for our app:
 const pokemonApp = {};
 
@@ -183,9 +200,17 @@ pokemonApp.winnerDisplay = (pokemon1, pokemon2) => {
   if (pokemon1 > pokemon2) {
     console.log(pokemon1, pokemon2);
     console.log("you win");
+    document.querySelector(".printWinner").innerHTML = "";
+    const printWin = document.createElement("p");
+    printWin.innerText = `YOU WIN!!!!!😁 \n Level: ${pokemon1} > Level: ${pokemon2}`;
+    document.querySelector(".printWinner").append(printWin);
   } else if (pokemon1 < pokemon2) {
     console.log(pokemon1, pokemon2);
     console.log("you lose");
+    document.querySelector(".printWinner").innerHTML = "";
+    const printWin = document.createElement("p");
+    printWin.innerText = `YOU LOSE!  :( 🤖 \n Level: ${pokemon1} < Level: ${pokemon2}`;
+    document.querySelector(".printWinner").append(printWin);
   }
 };
 

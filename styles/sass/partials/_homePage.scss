@@ -1,12 +1,21 @@
 @use "./variables";
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 // **********************SELECTION SECTION****************************************
 
 .selection {
   padding: 50px;
   background-color: #2a75bb;
   color: white;
-  height: 100%;
+  // height: 100%;
 }
 
 .container {
@@ -47,6 +56,7 @@ form {
 
 main {
   background-color: variables.$background;
+  height: 100%;
 }
 
 .pokemonBalls {

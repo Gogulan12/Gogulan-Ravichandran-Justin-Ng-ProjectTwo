@@ -303,11 +303,19 @@ html {
   font-family: "Press Start 2P", cursive;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 .selection {
   padding: 50px;
   background-color: #2a75bb;
   color: white;
-  height: 100%;
 }
 
 .container {
@@ -346,6 +354,7 @@ form {
 
 main {
   background-color: #38572f;
+  height: 100%;
 }
 
 .pokemonBalls {
@@ -401,7 +410,6 @@ main {
 }
 
 .battleSelection {
-  height: 100%;
   padding: 50px;
   background-color: #2a75bb;
   color: white;
@@ -459,10 +467,27 @@ button:active {
       justify-content: space-around;
 }
 
+.yourChoice,
+.computerChoice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
 .imageContainerOne,
 .imageContainerTwo {
   border: 3px solid black;
   background-color: white;
+  width: 300px;
 }
 
 .imageContainerOne img,
@@ -494,9 +519,28 @@ button:active {
           justify-content: space-between;
 }
 
+.characterAndChoiceOne,
+.characterAndChoiceTwo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45%;
+}
+
 .displayCharacter img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.pokeballTeam {
+  text-align: center;
 }
 
 .pokeballTeam img {
@@ -545,6 +589,20 @@ button:active {
 
 .imageOfWinner img {
   width: 300px;
+}
+
+.printWinner {
+  font-size: 30px;
+  padding: 40px 30px;
+  text-align: center;
+  line-height: 2.5;
+  border: 3px solid black;
+  background-color: white;
+}
+
+.levelAdvantage {
+  padding-top: 40px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 680px) {
@@ -641,5 +699,74 @@ button:active {
 @media (max-width: 370px) {
   .hamburger {
     padding-left: 10px;
+  }
+}
+@media (max-width: 830px) {
+  .pokeballTeam img {
+    width: 30px;
+  }
+  .imageContainerOne img,
+.imageContainerTwo img {
+    width: 150px;
+  }
+  .imageContainerOne,
+.imageContainerTwo {
+    width: 150px;
+  }
+  .printWinner {
+    font-size: 20px;
+  }
+  .versus {
+    padding-top: 300px;
+  }
+}
+@media (max-width: 650px) {
+  .pokeballTeam {
+    display: none;
+  }
+  .imagePikachu img {
+    width: 200px;
+  }
+}
+@media (max-width: 500px) {
+  .printWinner {
+    padding: 20px 10px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 435px) {
+  .imageContainerOne img,
+.imageContainerTwo img {
+    width: 70px;
+    padding-right: 10px;
+  }
+  .imageContainerOne,
+.imageContainerTwo {
+    width: 70px;
+  }
+  #pageTitle {
+    padding: 0;
+  }
+  .pokemonName1,
+.pokemonName2,
+.pokemonName1 h2,
+.pokemonName2 h2,
+.users {
+    font-size: 0.7rem;
+  }
+  .yourChoice,
+.computerChoice {
+    font-size: 0.7rem;
+  }
+  .finalPokemon,
+.printWinner {
+    font-size: 0.7rem;
+  }
+  .printWinner {
+    padding: 20px 10px;
+  }
+  .versus {
+    padding-top: 150px;
+    font-size: 0.7rem;
   }
 }
