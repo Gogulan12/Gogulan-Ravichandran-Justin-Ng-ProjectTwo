@@ -33,8 +33,6 @@ pokemonApp.getPokemon = (pokemonPick1, pokemonPick2) => {
       });
 
       pokemonApp.chosenPokemon(data);
-      // pokemonApp.userWinner(data);
-      // console.log(data);
     });
 
   /////////////////////////FETCH CALL FOR COMPUTER SELECTION//////////////////////////////////////
@@ -54,8 +52,6 @@ pokemonApp.getPokemon = (pokemonPick1, pokemonPick2) => {
       });
 
       pokemonApp.computerPokemon(data);
-      // pokemonApp.computerWinner(data);
-      // console.log(data);
     });
 };
 
@@ -144,59 +140,53 @@ pokemonApp.pokemonLevel = () => {
 
 ///////////////////////////////WINNER CALCULATION/////////////////////////////////
 
-// ////////function created to change winner image to user
+////////function created to change winner image to user
 
-// pokemonApp.userWinner = (youWon) => {
-//   document.querySelector(".imageOfWinner").innerHTML = "";
-//   document.querySelector(".finalPokemonName").innerHTML = "";
+pokemonApp.userWinner = function (youWon) {
+  document.querySelector(".imageOfWinner").innerHTML = "";
+  document.querySelector(".finalPokemonName").innerHTML = "";
 
-//   const pokemonImage = document.createElement("img");
-//   // pokemonImage.classList.add("pokemonImage");
-//   pokemonImage.src = youWon.sprites.other["official-artwork"].front_default;
-//   pokemonImage.alt = "pokemon Image";
+  const pokemonImage = document.createElement("img");
+  // pokemonImage.classList.add("pokemonImage");
+  pokemonImage.src = youWon.sprites.other["official-artwork"].front_default;
+  pokemonImage.alt = "pokemon Image";
 
-//   /////////////////TO change pokemon name to selected name
-//   const pokemonName = document.createElement("h2");
-//   // pokemonName.classList.add("pokemonName");
-//   pokemonName.innerText = youWon.name;
+  /////////////////TO change pokemon name to selected name
+  const pokemonName = document.createElement("h2");
+  // pokemonName.classList.add("pokemonName");
+  pokemonName.innerText = youWon.name;
 
-//   document.querySelector(".imageOfWinner").append(pokemonImage);
-//   document.querySelector(".finalPokemonName").append(pokemonName);
-// };
+  document.querySelector(".imageOfWinner").append(pokemonImage);
+  document.querySelector(".finalPokemonName").append(pokemonName);
+};
 
-// ////////function created to change winner image to computer
+////////function created to change winner image to computer
 
-// pokemonApp.computerWinner = (computer) => {
-//   document.querySelector(".imageOfWinner").innerHTML = "";
-//   document.querySelector(".finalPokemonName").innerHTML = "";
+pokemonApp.computerWinner = function (computer) {
+  document.querySelector(".imageOfWinner").innerHTML = "";
+  document.querySelector(".finalPokemonName").innerHTML = "";
 
-//   const pokemonImage = document.createElement("img");
-//   pokemonImage.src = computer.sprites.other["official-artwork"].front_default;
-//   pokemonImage.alt = "pokemon Image";
+  const pokemonImage = document.createElement("img");
+  pokemonImage.src = computer.sprites.other["official-artwork"].front_default;
+  pokemonImage.alt = "pokemon Image";
 
-//   /////////////////TO change pokemon name to selected name
-//   const pokemonName = document.createElement("h2");
-//   // pokemonName.classList.add("pokemonName");
-//   pokemonName.innerText = computer.name;
+  /////////////////TO change pokemon name to selected name
+  const pokemonName = document.createElement("h2");
+  // pokemonName.classList.add("pokemonName");
+  pokemonName.innerText = computer.name;
 
-//   document.querySelector(".imageOfWinner").append(pokemonImage);
-//   document.querySelector(".finalPokemonName").append(pokemonName);
-// };
+  document.querySelector(".imageOfWinner").append(pokemonImage);
+  document.querySelector(".finalPokemonName").append(pokemonName);
+};
 
 pokemonApp.winnerDisplay = (pokemon1, pokemon2) => {
   if (pokemon1 > pokemon2) {
+    console.log(pokemon1, pokemon2);
     console.log("you win");
-    // userWinner();
-  } else {
+  } else if (pokemon1 < pokemon2) {
+    console.log(pokemon1, pokemon2);
     console.log("you lose");
-    // computerWinner();
   }
-
-  // if (value1 > value2) {
-  //   document
-  //     .querySelector(".imageOfWinner")
-  //     .append(imageContainerOne.innerHTML);
-  // }
 };
 
 /////////////////////////// FUNCTION TO GET USER INPUT///////////////////////////
@@ -205,8 +195,6 @@ pokemonApp.getUserInput = () => {
   document
     .querySelector(".buttonSelection")
     .addEventListener("click", function () {
-      // const selection = this.value;
-      // console.log(selection);
       let value1 = Math.floor(Math.random() * 905) + 1;
       let value2 = Math.floor(Math.random() * 905) + 1;
       if (value1 === value2) {
@@ -214,7 +202,6 @@ pokemonApp.getUserInput = () => {
       }
       pokemonApp.getPokemon(value1, value2);
       pokemonApp.pokemonLevel();
-      // pokemonApp.winnerDisplay();
     });
 };
 
