@@ -1,0 +1,86 @@
+// MEDIA QUERY MAX WIDTH 830PX
+@media (max-width: 830px) {
+  .pokeballTeam img {
+    width: 30px;
+  }
+  .imageContainerOne,
+  .imageContainerTwo {
+    width: 150px;
+  }
+
+  .imageContainerOne img,
+  .imageContainerTwo img {
+    width: 150px;
+  }
+
+  .versus {
+    padding-top: 300px;
+  }
+
+  .printWinner {
+    font-size: 20px;
+  }
+}
+
+// MEDIA QUERY MAX WIDTH 650PX
+@media (max-width: 650px) {
+  .imagePikachu img {
+    width: 200px;
+  }
+  .pokeballTeam {
+    display: none;
+  }
+}
+
+// MEDIA QUERY MAX WIDTH 500PX
+@media (max-width: 500px) {
+  .printWinner {
+    padding: 20px 10px;
+    font-size: 0.9rem;
+  }
+}
+
+// MEDIA QUERY MAX WIDTH 435PX
+@media (max-width: 435px) {
+  #pageTitle {
+    padding: 0;
+  }
+
+  .imageContainerOne,
+  .imageContainerTwo {
+    width: 70px;
+  }
+
+  .imageContainerOne img,
+  .imageContainerTwo img {
+    width: 70px;
+    padding-right: 10px;
+  }
+
+  .pokemonName1,
+  .pokemonName2,
+  .pokemonName1 h2,
+  .pokemonName2 h2,
+  .users {
+    font-size: 0.7rem;
+  }
+
+  .yourChoice,
+  .computerChoice {
+    font-size: 0.7rem;
+  }
+
+  .versus {
+    padding-top: 150px;
+    font-size: 0.7rem;
+  }
+
+  .finalPokemon,
+  .printWinner {
+    font-size: 0.7rem;
+  }
+
+  .printWinner {
+    padding: 20px 10px;
+  }
+}
