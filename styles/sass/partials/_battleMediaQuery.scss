@@ -32,6 +32,12 @@
   }
 }
 
+@media (max-width: 516px) {
+  .battleSelection {
+    padding-top: 90px;
+  }
+}
+
 // MEDIA QUERY MAX WIDTH 500PX
 @media (max-width: 500px) {
   .printWinner {

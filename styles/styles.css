@@ -649,7 +649,7 @@ button:active {
 }
 @media (max-width: 516px) {
   .navBar {
-    position: absolute;
+    position: fixed;
     right: -100%;
     top: 48px;
     gap: 0;
@@ -670,6 +670,7 @@ button:active {
   .navBar.active {
     right: 0;
     padding: 0 15px 0 10px;
+    position: absolute;
   }
   .hamburger {
     display: block;
@@ -767,6 +768,11 @@ button:active {
   }
   .pokeballTeam {
     display: none;
+  }
+}
+@media (max-width: 516px) {
+  .battleSelection {
+    padding-top: 90px;
   }
 }
 @media (max-width: 500px) {
