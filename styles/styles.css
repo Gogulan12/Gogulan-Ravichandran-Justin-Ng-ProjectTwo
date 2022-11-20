@@ -688,6 +688,11 @@ button:active {
             transform: translateY(-8px) rotate(-45deg);
   }
 }
+@media (max-width: 436px) {
+  .selection {
+    padding-top: 90px;
+  }
+}
 @media (max-width: 422px) {
   footer p {
     font-size: 0.9rem;

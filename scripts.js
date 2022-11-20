@@ -18,7 +18,6 @@ pokemonApp.getPokemon = (pokemonPick) => {
   fetch(url)
     .then((results) => results.json())
     .then((data) => {
-      console.log(data);
       document.querySelector(".pokemonBalls").innerHTML = "";
       document.querySelector(".pokemonImage").innerHTML = "";
       document.querySelector(".pokemonName").innerHTML = "";
