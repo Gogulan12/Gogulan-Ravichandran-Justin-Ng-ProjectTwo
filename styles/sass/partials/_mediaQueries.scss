@@ -1,5 +1,10 @@
 @use './variables';
 
+@media(max-width:720px){
+    h2{
+        padding: 0 25px;
+    }
+}
 
 @media (max-width: 680px) {
     h1{
@@ -46,20 +51,18 @@
         }
 
         a{
-            font-size: 0.9rem;
+            font-size: 0.8rem;
         }
     }
    
 } 
 
-@media (max-width: 590px){
+@media (max-width: 596px){
     h2{
         font-size: 1.3rem;
+        padding: 0 10px;
     }
 
-    nav a{
-        font-size: 0.8rem;
-    }
 }
 
 @media (max-width: 550px){
@@ -70,10 +73,11 @@
 }
 
 @media(max-width: 516px){
+    
     .navBar {
         position: absolute;
         right: -100%;
-        top: 50px;
+        top: 48px;
         gap: 0;
         flex-direction: column;
         background: #3c5aa6;
@@ -111,9 +115,68 @@
     }
 }
 
+@media (max-width:422px){
+    footer p {
+        font-size: 0.9rem;
+    }
+}
 
-@media (max-width:370px) {
+
+
+@media (max-width:394px) {
     .hamburger{
         padding-left: 10px;
     }
 }
+
+
+@media (max-width: 368px){
+    #pageTitle{
+        padding: 50px 0 30px 0;
+    }
+    ul li{
+        font-size: 0.9rem;
+    }
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+ 
+
+@media (max-width: 338px){
+
+    .pokemonBalls h2{
+        font-size: 1.1rem;
+    }
+     ul li{
+        font-size: 0.8rem;
+    }
+    
+    footer p{
+        font-size: 0.7rem;
+    }
+ .navBar{
+        top: 43px;
+    }
+}
+
+ 
+@media(max-width: 332px){ 
+    
+    .pokemonBalls h2{
+        font-size: 1rem;
+    }
+    ul li {
+        font-size: 0.7rem;
+    }
+
+    footer p{
+        font-size: 0.6rem;
+    }
+
+    .navBar{
+        top: 39px;
+    }
+}
+
