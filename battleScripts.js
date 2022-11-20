@@ -1,4 +1,4 @@
-// Hamburger menu on the main page
+// Hamburger menu on the battle page
 
 const hamburger = document.querySelector(".hamburger");
 const navBar = document.querySelector(".navBar");
@@ -20,8 +20,6 @@ const pokemonApp = {};
 
 // An initializer function! The first thing that will be called, and it will start all other parts of our app up and running.
 pokemonApp.init = () => {
-  //   pokemonApp.getPokemon();
-
   pokemonApp.getUserInput();
 };
 
@@ -35,7 +33,6 @@ pokemonApp.getPokemon = (pokemonPick1, pokemonPick2) => {
   fetch(url1)
     .then((results) => results.json())
     .then((data) => {
-      //   console.log(data);
       let x = document.querySelectorAll(".imageContainerOne");
       x.forEach(function (item) {
         item.innerHTML = "";
@@ -58,7 +55,6 @@ pokemonApp.getPokemon = (pokemonPick1, pokemonPick2) => {
   fetch(url2)
     .then((results) => results.json())
     .then((data) => {
-      //   console.log(data);
       let x = document.querySelectorAll(".imageContainerTwo");
       x.forEach(function (item) {
         item.innerHTML = "";
@@ -127,7 +123,6 @@ pokemonApp.computerPokemon = (nameOfPokemon) => {
   /////////////////TO change pokemon type to selected type
   document.querySelector(".pokemonType2").innerHTML = "";
   const pokemonType = document.createElement("p");
-  // pokemonType.classList.add("pokemonType");
   pokemonType.innerText = nameOfPokemon.types[0].type.name;
   document
     .querySelector(".pokemonType2")
@@ -157,59 +152,21 @@ pokemonApp.pokemonLevel = () => {
 
 ///////////////////////////////WINNER CALCULATION/////////////////////////////////
 
-////////function created to change winner image to user
-
-pokemonApp.userWinner = function (youWon) {
-  document.querySelector(".imageOfWinner").innerHTML = "";
-  document.querySelector(".finalPokemonName").innerHTML = "";
-
-  const pokemonImage = document.createElement("img");
-  // pokemonImage.classList.add("pokemonImage");
-  pokemonImage.src = youWon.sprites.other["official-artwork"].front_default;
-  pokemonImage.alt = "pokemon Image";
-
-  /////////////////TO change pokemon name to selected name
-  const pokemonName = document.createElement("h2");
-  // pokemonName.classList.add("pokemonName");
-  pokemonName.innerText = youWon.name;
-
-  document.querySelector(".imageOfWinner").append(pokemonImage);
-  document.querySelector(".finalPokemonName").append(pokemonName);
-};
-
-////////function created to change winner image to computer
-
-pokemonApp.computerWinner = function (computer) {
-  document.querySelector(".imageOfWinner").innerHTML = "";
-  document.querySelector(".finalPokemonName").innerHTML = "";
-
-  const pokemonImage = document.createElement("img");
-  pokemonImage.src = computer.sprites.other["official-artwork"].front_default;
-  pokemonImage.alt = "pokemon Image";
-
-  /////////////////TO change pokemon name to selected name
-  const pokemonName = document.createElement("h2");
-  // pokemonName.classList.add("pokemonName");
-  pokemonName.innerText = computer.name;
-
-  document.querySelector(".imageOfWinner").append(pokemonImage);
-  document.querySelector(".finalPokemonName").append(pokemonName);
-};
-
 pokemonApp.winnerDisplay = (pokemon1, pokemon2) => {
   if (pokemon1 > pokemon2) {
-    console.log(pokemon1, pokemon2);
-    console.log("you win");
     document.querySelector(".printWinner").innerHTML = "";
     const printWin = document.createElement("p");
     printWin.innerText = `YOU WIN!!!!!😁 \n Level: ${pokemon1} > Level: ${pokemon2}`;
     document.querySelector(".printWinner").append(printWin);
   } else if (pokemon1 < pokemon2) {
-    console.log(pokemon1, pokemon2);
-    console.log("you lose");
     document.querySelector(".printWinner").innerHTML = "";
     const printWin = document.createElement("p");
     printWin.innerText = `YOU LOSE!  :( 🤖 \n Level: ${pokemon1} < Level: ${pokemon2}`;
+    document.querySelector(".printWinner").append(printWin);
+  } else if (pokemon1 == pokemon2) {
+    document.querySelector(".printWinner").innerHTML = "";
+    const printWin = document.createElement("p");
+    printWin.innerText = `Oh no! its a draw. Try again. 😐 \n Level: ${pokemon1} = Level: ${pokemon2}`;
     document.querySelector(".printWinner").append(printWin);
   }
 };

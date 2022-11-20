@@ -1,11 +1,6 @@
-// * {
-//   border: 1px solid green;
-// }
-
 // *******************TITLE AND BUTTION AREA STYLING*******************
 
 .battleSelection {
-  // height: 100%;
   padding: 50px;
   background-color: #2a75bb;
   color: white;
@@ -44,7 +39,6 @@ button:active {
 }
 
 .youAndComputerChoice h2 {
-  // margin: 0px;
   text-align: center;
   padding-bottom: 50px;
   text-transform: uppercase;
@@ -89,9 +83,7 @@ button:active {
 }
 
 .battle h2 {
-  // margin: 0px;
   text-align: center;
-  // padding-bottom: 50px;
   text-transform: uppercase;
 }
 
@@ -120,7 +112,6 @@ button:active {
 .pokeballTeam img {
   width: 40px;
   height: auto;
-  // text-align: center;
 }
 
 .pokemonType1,
@@ -142,27 +133,14 @@ button:active {
 }
 
 .winner h2 {
-  // margin: 0px;
   text-align: center;
-  // padding-bottom: 50px;
   text-transform: uppercase;
 }
 
 .finalPokemon {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
-}
-
-.imageOfWinner {
-  border: 3px solid black;
-  background-color: white;
-  // width: 300px;
-}
-
-.imageOfWinner img {
-  width: 300px;
 }
 
 .printWinner {

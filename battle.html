@@ -42,16 +42,23 @@
         <div class="imagePikachu">
           <img src="./images/pikachu.png" alt="pikachu" />
         </div>
+        <!-- END .imagePikachu -->
+        <!-- Button -->
         <div class="buttonSelection">
           <button>Press Here!</button>
         </div>
+        <!-- END .buttonSelection -->
       </div>
+      <!-- END .battleContainer -->
     </section>
 
+    <!--------------- SELECTION SECTION  -------------->
     <!-- Display the choice between you and computer -->
     <section class="youAndComputerChoice">
       <h2>Selection</h2>
+      <!-- Choice container -->
       <div class="choiceContainer">
+        <!-- your choice -->
         <div class="yourChoice">
           <div class="users">
             <h3>You:</h3>
@@ -63,7 +70,9 @@
             <p>Pokemon Name</p>
           </div>
         </div>
+        <!-- END .yourChoice -->
 
+        <!-- computer choice -->
         <div class="computerChoice">
           <div class="users">
             <h3>Computer:</h3>
@@ -75,14 +84,20 @@
             <p>Pokemon Name</p>
           </div>
         </div>
+        <!-- END .computerChoice -->
       </div>
+      <!-- END .choiceContainer -->
     </section>
 
-    <!-- DISPLAY TOURNAMENT WITH PLAYER AND POKEMON TYPE -->
+    <!------------------BATTLE SECTION---------------------------->
+    <!-- Display tournament with pokemon image, type, and level -->
     <section class="battle">
       <h2>Battle</h2>
+      <!-- Wrapper -->
       <div class="wrapper">
+        <!-- containers both user and computer choice -->
         <div class="characterAndChoiceContainer">
+          <!-- Character and choice of user (1)-->
           <div class="characterAndChoiceOne">
             <div class="displayCharacter">
               <img
@@ -98,8 +113,11 @@
                 <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
                 <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
               </div>
+              <!-- END .pokeballTeam -->
             </div>
+            <!-- END .displayCharacter -->
 
+            <!-- API call changes between image,type, and level -->
             <div class="yourChoice">
               <h3>You:</h3>
               <div class="imageContainerOne">
@@ -115,10 +133,17 @@
                 <p>Pokemon Level</p>
               </div>
             </div>
+            <!-- END .yourChoice -->
           </div>
+          <!-- END .characterAndChoiceOne -->
+
+          <!-- Versus parition between user and computer -->
           <div class="versus">
             <p>VS</p>
           </div>
+          <!-- END .versus -->
+
+          <!-- Character and choice of computer (2)-->
           <div class="characterAndChoiceTwo">
             <div class="displayCharacter">
               <img
@@ -134,8 +159,11 @@
                 <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
                 <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
               </div>
+              <!-- END .pokeballTeam -->
             </div>
+            <!-- END .displayCharacter -->
 
+            <!-- API call changes between image,type, and level -->
             <div class="computerChoice">
               <h3>Computer:</h3>
               <div class="imageContainerTwo">
@@ -151,22 +179,19 @@
                 <p>Pokemon Level</p>
               </div>
             </div>
+            <!-- END .computerChoice -->
           </div>
+          <!-- END .characterAndChoiceTwo -->
         </div>
+        <!-- END .characterAndChoiceContainer -->
       </div>
+      <!-- END .wrapper -->
     </section>
 
-    <!-- WINNER SECTION -->
+    <!--------------------- WINNER SECTION ---------------------->
     <section class="winner">
       <h2>winner</h2>
       <div class="finalPokemon">
-        <!-- <h3 class="winnerName">Winner Name</h3> -->
-        <!-- <div class="imageOfWinner">
-          <img src="./Images/Poké_Ball_icon.svg.png" alt="pokeball" />
-        </div>
-        <div class="finalPokemonName">
-          <p>Pokemon Name</p>
-        </div> -->
         <div class="printWinner">
           <p>Display Winner:</p>
           <p>You 😁 or Computer 🤖</p>
@@ -176,8 +201,10 @@
           <p>Stronger Pokemon</p>
         </div>
       </div>
+      <!-- END .finalPokemon -->
     </section>
 
+    <!------------------- FOOTER SECTION --------------------------->
     <footer>
       <p>Made at Juno College 2022</p>
     </footer>

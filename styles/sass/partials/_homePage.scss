@@ -1,35 +1,24 @@
 @use "./variables";
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-}
-
 // **********************SELECTION SECTION****************************************
 
 .selection {
   padding: 50px;
   background-color: #2a75bb;
   color: white;
-  // height: 100%;
 }
 
 .container {
   text-align: center;
-  // margin-top: 50px;
+}
+
+.container img {
+  width: 100px;
 }
 
 #pageTitle {
   margin: 0;
   padding: 50px 50px 30px 50px;
-}
-
-.container img {
-  width: 100px;
 }
 
 form {
@@ -44,19 +33,18 @@ form {
   border-radius: 15px;
 }
 
-// ****************MAIN SECTION - DISPLAYING POKEOMON******************************
-.pokemonImage {
-  width: 40vw;
-  margin-left: auto;
-  margin-right: auto;
-  img {
-    width: 100%;
-  }
+// **********************BACKGROUND SECTION****************************************
+.background {
+  background-image: url(../Images/backgroundImage3.png);
+  height: 20vh;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
 }
 
+// ****************MAIN SECTION - DISPLAYING POKEOMON******************************
 main {
   background-color: variables.$background;
-  height: 100%;
 }
 
 .pokemonBalls {
@@ -68,7 +56,33 @@ main {
   }
 }
 
-// *****************MAIN SECTION POKEMON MOVE STYLING*******************************
+.pokemonBalls h2 {
+  color: white;
+}
+
+// *****************MAIN SECTION POKEMON API CALL STYLING*******************************
+
+.pokemonImage img {
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.pokemonImage {
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    width: 100%;
+  }
+}
+
+.pokemonName,
+.pokemonType {
+  color: white;
+  text-transform: capitalize;
+}
 
 .pokemonType h3 {
   padding: 0;
@@ -79,10 +93,8 @@ main {
   padding: 10px 0 50px 0;
   margin: 0;
   display: flex;
-  // justify-content: space-around;
   flex-wrap: wrap;
   justify-content: center;
-  // padding: 20px;
   li {
     list-style: none;
     width: 40%;
@@ -92,21 +104,4 @@ main {
     background-color: white;
     border-radius: 15px;
   }
-}
-
-.pokemonBalls h2 {
-  color: white;
-}
-
-.pokemonImage img {
-  background-color: white;
-  border: 3px solid black;
-  border-radius: 20px;
-  padding: 30px;
-}
-
-.pokemonName,
-.pokemonType {
-  color: white;
-  text-transform: capitalize;
 }

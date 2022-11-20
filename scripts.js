@@ -19,7 +19,6 @@ pokemonApp.getPokemon = (pokemonPick) => {
     .then((results) => results.json())
     .then((data) => {
       console.log(data);
-      // document.querySelector("#chosenPokemon").innerHTML = "";
       document.querySelector(".pokemonBalls").innerHTML = "";
       document.querySelector(".pokemonImage").innerHTML = "";
       document.querySelector(".pokemonName").innerHTML = "";
@@ -31,13 +30,13 @@ pokemonApp.getPokemon = (pokemonPick) => {
 
 pokemonApp.chosenPokemon = (nameOfPokemon) => {
   const pokemonName = document.createElement("h2");
-  // pokemonName.classList.add("pokemonName");
+
   pokemonName.innerText = nameOfPokemon.name;
   const pokemonType = document.createElement("p");
-  // pokemonType.classList.add("pokemonType");
+
   pokemonType.innerText = nameOfPokemon.types[0].type.name;
   const pokemonImage = document.createElement("img");
-  // pokemonImage.classList.add("pokemonImage");
+
   pokemonImage.src =
     nameOfPokemon.sprites.other["official-artwork"].front_default;
   pokemonImage.alt = "pokemon Image";
@@ -70,7 +69,7 @@ pokemonApp.getUserInput = () => {
   // Want to get the value in the options list to select a pokemon
   document.querySelector("#Pokemon").addEventListener("change", function () {
     const selection = this.value;
-    // console.log(selection);
+
     pokemonApp.getPokemon(selection);
   });
 };
@@ -78,18 +77,19 @@ pokemonApp.getUserInput = () => {
 // Call the init function to kick our app off! This will always be at the bottom of our file.
 pokemonApp.init();
 
-
 // Hamburger menu on the main page
 
 const hamburger = document.querySelector(".hamburger");
-const navBar = document.querySelector(".navBar")
+const navBar = document.querySelector(".navBar");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
   navBar.classList.toggle("active");
-})
+});
 
-document.querySelectorAll(".navLink").forEach(n => n.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  navBar.classList.remove("active");
-}))
+document.querySelectorAll(".navLink").forEach((n) =>
+  n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navBar.classList.remove("active");
+  })
+);
